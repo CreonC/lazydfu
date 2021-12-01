@@ -26,6 +26,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Remap Mods
+      run: ./gradle remapJar
     - name: Upload assets to GitHub
       uses: AButler/upload-release-assets@v2.0
       with:
